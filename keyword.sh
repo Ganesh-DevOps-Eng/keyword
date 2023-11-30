@@ -1,15 +1,13 @@
 #!/bin/bash
 
-# Remove existing files
-rm -rf /home/devops_automation/Downloads/newly-registered-domains*
-rm -rf "/home/devops_automation/keyword/domain-names.txt"
+
 
 # Run robot framework script
-python3 -m robot /home/devops_automation/keyword/keyword.robot
+python3 -m robot keyword.robot
 sleep 5
 
 # Unzip downloaded files
-unzip /home/devops_automation/Downloads/newly-registered-domains*.zip -d /home/devops_automation/keyword/
+unzip newly-registered-domains*.zip
 
 # Recipient email addresses
 RECIPIENT_KEYWORD_FOUND="ashish.garg@matellio.com"
@@ -33,7 +31,7 @@ send_email() {
 
 # Replace 'your_keyword' with the actual keyword you are looking for
 keyword="matellio"
-file_path="/home/devops_automation/keyword/domain-names.txt"
+file_path="domain-names.txt"
 
 if grep -q "$keyword" "$file_path"; then
     echo "Keyword found"
