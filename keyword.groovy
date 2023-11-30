@@ -15,6 +15,7 @@ pipeline {
         stage('excute') {
             steps {
                 script {
+                    sh 'cd $WORKSPACE'
                     sh 'chmod +x keyword.robot'
                     sh 'keyword.sh'
                 }
