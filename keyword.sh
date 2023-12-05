@@ -10,8 +10,8 @@ sleep 5
 unzip newly-registered-domains*.zip
 
 # Recipient email addresses
-RECIPIENT_KEYWORD_FOUND="ashish.garg@matellio.com"
-RECIPIENT_KEYWORD_NOT_FOUND="ganesh.jat@matellio.com"
+RECIPIENT_KEYWORD_FOUND=("ashish.garg@matellio.com" "khaleel@matellio.com" "dakshr@matellio.com" "ganesh.jat@matellio.com")
+RECIPIENT_KEYWORD_NOT_FOUND=("ashish.garg@matellio.com" "ganesh.jat@matellio.com")
 
 # Set the email subject and body
 SUBJECT_KEYWORD_FOUND="Keyword Found"
