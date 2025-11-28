@@ -1,87 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-11-28T08:40:39.699891" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-11-28T09:42:40.188984" rpa="false" schemaversion="5">
 <suite id="s1" name="Keyword" source="/home/ubuntu/keyword/keyword.robot">
-<test id="s1-t1" name="Verify Successful Download" line="6">
+<test id="s1-t1" name="Verify Successful Download" line="9">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-28T08:40:40.406151" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x79e459937a30&gt;</msg>
+<msg time="2025-11-28T09:42:40.807670" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7a9567277b50&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-28T08:40:40.405523" elapsed="0.000704"/>
+<status status="PASS" start="2025-11-28T09:42:40.807035" elapsed="0.000713"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
-<arg>headless</arg>
+<arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-28T08:40:40.406557" elapsed="0.000275"/>
+<status status="PASS" start="2025-11-28T09:42:40.808061" elapsed="0.000303"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
-<arg>disable-gpu</arg>
+<arg>--disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-28T08:40:40.407086" elapsed="0.000284"/>
+<status status="PASS" start="2025-11-28T09:42:40.808616" elapsed="0.000252"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
-<arg>no-sandbox</arg>
+<arg>--no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-28T08:40:40.407614" elapsed="0.000254"/>
+<status status="PASS" start="2025-11-28T09:42:40.809122" elapsed="0.000265"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
-<arg>disable-dev-shm-usage</arg>
+<arg>--disable-dev-shm-usage</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-28T08:40:40.408108" elapsed="0.000277"/>
+<status status="PASS" start="2025-11-28T09:42:40.809627" elapsed="0.000252"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-28T09:42:40.810680" level="INFO">${prefs} = {'download.default_directory': '/home/ubuntu/Downloads', 'download.prompt_for_download': 'False'}</msg>
+<var>${prefs}</var>
+<arg>download.default_directory=${DOWNLOAD_DIR}</arg>
+<arg>download.prompt_for_download=False</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-28T09:42:40.810152" elapsed="0.000585"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-11-28T09:42:40.811003" elapsed="0.000334"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-28T08:40:40.409094" level="INFO">Opening browser 'chrome' to base url 'https://www.whoisds.com/newly-registered-domains'.</msg>
+<msg time="2025-11-28T09:42:40.812056" level="INFO">Opening browser 'chrome' to base url 'https://www.whoisds.com/newly-registered-domains'.</msg>
 <arg>https://www.whoisds.com/newly-registered-domains</arg>
 <arg>chrome</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-28T08:40:40.408663" elapsed="18.007841"/>
+<status status="PASS" start="2025-11-28T09:42:40.811627" elapsed="9.712236"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-28T08:40:58.764321" elapsed="0.127751"/>
+<status status="PASS" start="2025-11-28T09:42:50.739316" elapsed="0.081305"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Browser opened in headless mode</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-28T08:40:58.896372" elapsed="0.034119"/>
+<status status="PASS" start="2025-11-28T09:42:50.829598" elapsed="0.083585"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button</arg>
 <arg>timeout=15</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-28T08:40:58.935420" elapsed="0.265333"/>
+<status status="PASS" start="2025-11-28T09:42:50.917048" elapsed="0.307983"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-28T08:40:59.212254" level="INFO">Clicking element 'xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button'.</msg>
+<msg time="2025-11-28T09:42:51.235145" level="INFO">Clicking element 'xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button'.</msg>
 <arg>xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-28T08:40:59.205792" elapsed="0.807022"/>
+<status status="PASS" start="2025-11-28T09:42:51.230309" elapsed="0.928510"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-28T08:41:20.371989" level="INFO">Slept 20 seconds.</msg>
+<msg time="2025-11-28T09:43:12.306356" level="INFO">Slept 20 seconds.</msg>
 <arg>20s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-28T08:41:00.117092" elapsed="20.255098"/>
+<status status="PASS" start="2025-11-28T09:42:52.192671" elapsed="20.113884"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-28T08:41:20.374340" elapsed="0.819199"/>
+<status status="PASS" start="2025-11-28T09:43:12.307396" elapsed="0.687230"/>
 </kw>
 <tag>TC-1</tag>
-<status status="PASS" start="2025-11-28T08:40:40.403749" elapsed="40.808266"/>
+<status status="PASS" start="2025-11-28T09:42:40.805252" elapsed="32.207921"/>
 </test>
 <doc>A test case for valid first file download.</doc>
-<status status="PASS" start="2025-11-28T08:40:39.702469" elapsed="41.611055"/>
+<status status="PASS" start="2025-11-28T09:42:40.190472" elapsed="32.848198"/>
 </suite>
 <statistics>
 <total>
