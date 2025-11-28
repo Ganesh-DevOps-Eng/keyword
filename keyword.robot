@@ -3,7 +3,7 @@ Documentation  A test case for valid first file download.
 Library        SeleniumLibrary
 
 *** Variables ***
-${DOWNLOAD_DIR}    /home/ubuntu/Downloads
+${DOWNLOAD_DIR}    /var/lib/jenkins/workspace/Keyword/downloads
 
 *** Test Cases ***
 Verify Successful Download
