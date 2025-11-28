@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-11-28T07:43:34.208657" rpa="false" schemaversion="5">
+<suite id="s1" name="Keyword" source="/home/ubuntu/keyword/keyword.robot">
+<test id="s1-t1" name="Verify Successful Download" line="6">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T07:43:34.896074" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7cc67f137a30&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T07:43:34.895436" elapsed="0.000709"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-11-28T07:43:34.896445" elapsed="0.000271"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-11-28T07:43:34.896960" elapsed="0.000249"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-11-28T07:43:34.897461" elapsed="0.000260"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-11-28T07:43:34.897962" elapsed="0.000247"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-28T07:43:34.898913" level="INFO">Opening browser 'chrome' to base url 'https://www.whoisds.com/newly-registered-domains'.</msg>
+<arg>https://www.whoisds.com/newly-registered-domains</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-28T07:43:34.898493" elapsed="23.316606"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-28T07:43:58.395667" elapsed="0.096202"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Browser opened in headless mode</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-28T07:43:58.496519" elapsed="0.026794"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button</arg>
+<arg>timeout=15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T07:43:58.526584" elapsed="0.186195"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T07:43:58.721983" level="INFO">Clicking element 'xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button'.</msg>
+<arg>xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T07:43:58.716665" elapsed="0.706778"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T07:44:19.521677" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T07:43:59.435479" elapsed="20.086423"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-28T07:44:19.523497" elapsed="0.572851"/>
+</kw>
+<tag>TC-1</tag>
+<status status="PASS" start="2025-11-28T07:43:34.893624" elapsed="45.299974"/>
+</test>
+<doc>A test case for valid first file download.</doc>
+<status status="PASS" start="2025-11-28T07:43:34.210733" elapsed="46.192601"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC-1</stat>
+</tag>
+<suite>
+<stat name="Keyword" id="s1" pass="1" fail="0" skip="0">Keyword</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

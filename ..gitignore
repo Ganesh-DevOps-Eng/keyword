@@ -1,0 +1,7 @@
+*.log
+*.zip
+*.deb
+output.xml
+log.html
+report.html
+
