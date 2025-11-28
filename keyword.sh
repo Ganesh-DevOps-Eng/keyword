@@ -53,8 +53,16 @@ else
     echo "Chrome and ChromeDriver are installed and matching → Skipping installation."
 fi
 
-# Run Robot Framework test
-echo "Running Robot Framework test..."
-/usr/bin/python3 -m robot keyword.robot
-echo "Robot test execution finished."
+# Add local user bin to PATH (to ensure user-level robot works)
+export PATH=$HOME/.local/bin:$PATH
 
+# Check if robot is installed, else install system-wide
+if ! command -v robot >/dev/null 2>&1; then
+    echo "Robot Framework not found → Installing..."
+    sudo /usr/bin/python3 -m pip install --upgrade robotframework robotframework-seleniumlibrary selenium
+fi
+
+# Run Robot test
+echo "Running Robot Framework test..."
+robot keyword.robot
+echo "Robot test execution finished."
