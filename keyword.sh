@@ -55,6 +55,6 @@ fi
 
 # Run Robot Framework test
 echo "Running Robot Framework test..."
-python3 -m robot keyword.robot
+/usr/bin/python3 -m robot keyword.robot
 echo "Robot test execution finished."
 

@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-11-28T07:43:34.208657" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-11-28T08:35:03.310645" rpa="false" schemaversion="5">
 <suite id="s1" name="Keyword" source="/home/ubuntu/keyword/keyword.robot">
 <test id="s1-t1" name="Verify Successful Download" line="6">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-28T07:43:34.896074" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7cc67f137a30&gt;</msg>
+<msg time="2025-11-28T08:35:04.090128" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x750bdf427a60&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-28T07:43:34.895436" elapsed="0.000709"/>
+<status status="PASS" start="2025-11-28T08:35:04.089465" elapsed="0.000734"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-28T07:43:34.896445" elapsed="0.000271"/>
+<status status="PASS" start="2025-11-28T08:35:04.090506" elapsed="0.000292"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-28T07:43:34.896960" elapsed="0.000249"/>
+<status status="PASS" start="2025-11-28T08:35:04.091043" elapsed="0.000272"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-28T07:43:34.897461" elapsed="0.000260"/>
+<status status="PASS" start="2025-11-28T08:35:04.091571" elapsed="0.000256"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>disable-dev-shm-usage</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-28T07:43:34.897962" elapsed="0.000247"/>
+<status status="PASS" start="2025-11-28T08:35:04.092063" elapsed="0.000266"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-28T07:43:34.898913" level="INFO">Opening browser 'chrome' to base url 'https://www.whoisds.com/newly-registered-domains'.</msg>
+<msg time="2025-11-28T08:35:04.093047" level="INFO">Opening browser 'chrome' to base url 'https://www.whoisds.com/newly-registered-domains'.</msg>
 <arg>https://www.whoisds.com/newly-registered-domains</arg>
 <arg>chrome</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-28T07:43:34.898493" elapsed="23.316606"/>
+<status status="PASS" start="2025-11-28T08:35:04.092608" elapsed="22.389836"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-28T07:43:58.395667" elapsed="0.096202"/>
+<status status="PASS" start="2025-11-28T08:35:26.820771" elapsed="0.082134"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Browser opened in headless mode</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-28T07:43:58.496519" elapsed="0.026794"/>
+<status status="PASS" start="2025-11-28T08:35:26.906692" elapsed="0.035513"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button</arg>
 <arg>timeout=15</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-28T07:43:58.526584" elapsed="0.186195"/>
+<status status="PASS" start="2025-11-28T08:35:26.946916" elapsed="0.278437"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-28T07:43:58.721983" level="INFO">Clicking element 'xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button'.</msg>
+<msg time="2025-11-28T08:35:27.236551" level="INFO">Clicking element 'xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button'.</msg>
 <arg>xpath=//*[@id="content-wrapper"]/div/div/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/a/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-28T07:43:58.716665" elapsed="0.706778"/>
+<status status="PASS" start="2025-11-28T08:35:27.231266" elapsed="0.659202"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-28T07:44:19.521677" level="INFO">Slept 20 seconds.</msg>
+<msg time="2025-11-28T08:35:47.992576" level="INFO">Slept 20 seconds.</msg>
 <arg>20s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-28T07:43:59.435479" elapsed="20.086423"/>
+<status status="PASS" start="2025-11-28T08:35:27.895386" elapsed="20.097387"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-28T07:44:19.523497" elapsed="0.572851"/>
+<status status="PASS" start="2025-11-28T08:35:47.994263" elapsed="0.517410"/>
 </kw>
 <tag>TC-1</tag>
-<status status="PASS" start="2025-11-28T07:43:34.893624" elapsed="45.299974"/>
+<status status="PASS" start="2025-11-28T08:35:04.037630" elapsed="44.489204"/>
 </test>
 <doc>A test case for valid first file download.</doc>
-<status status="PASS" start="2025-11-28T07:43:34.210733" elapsed="46.192601"/>
+<status status="PASS" start="2025-11-28T08:35:03.312790" elapsed="45.237928"/>
 </suite>
 <statistics>
 <total>
